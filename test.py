@@ -10,9 +10,9 @@ import os
 st.set_page_config(page_title="English-Hindi Translator", layout="centered")
 
 # -------------------------------------------------------------------
-# Set up paths based on your workspace directory
+# Set up paths based on your EXACT workspace directory
 # -------------------------------------------------------------------
-BASE_DIR = "/workspaces/Simple-Encoder-Translator/model"
+BASE_DIR = "/workspaces/Simple-Encoder-Translator/model/Translator_Project"
 
 FILES = {
     'eng_tok': os.path.join(BASE_DIR, 'eng_tokenizer.pkl'),
@@ -27,7 +27,7 @@ if missing_files:
     st.error("⚠️ Missing required model files in your directory:")
     for f in missing_files:
         st.write(f"- `{f}`")
-    st.info("Please ensure your model files are located exactly in /workspaces/Simple-Encoder-Translator/model")
+    st.info(f"Please ensure your model files are located exactly in {BASE_DIR}")
     st.stop()
 
 # -------------------------------------------------------------------
