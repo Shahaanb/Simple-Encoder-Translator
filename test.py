@@ -10,9 +10,9 @@ import os
 st.set_page_config(page_title="English-Hindi Translator", layout="centered")
 
 # -------------------------------------------------------------------
-# Set up paths based on your local directory
+# Set up paths based on your workspace directory
 # -------------------------------------------------------------------
-BASE_DIR = r"C:\Users\shaha\Downloads\Lab6\model\Translator_Project"
+BASE_DIR = "/workspaces/Simple-Encoder-Translator/model"
 
 FILES = {
     'eng_tok': os.path.join(BASE_DIR, 'eng_tokenizer.pkl'),
@@ -27,7 +27,7 @@ if missing_files:
     st.error("⚠️ Missing required model files in your directory:")
     for f in missing_files:
         st.write(f"- `{f}`")
-    st.info("Please ensure you have downloaded the files from Colab and placed them in the correct folder.")
+    st.info("Please ensure your model files are located exactly in /workspaces/Simple-Encoder-Translator/model")
     st.stop()
 
 # -------------------------------------------------------------------
